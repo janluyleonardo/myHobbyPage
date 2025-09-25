@@ -92,11 +92,39 @@ footer {
   padding: 0.5rem;
 }
 
+/* Estilo para el contenedor de comentarios */
 #lista-comentarios {
-  margin-top: 2rem;
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
+
+/* Estilo para las tarjetas de comentarios */
+#lista-comentarios .card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#lista-comentarios .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#lista-comentarios .card-body {
+  padding: 1.25rem;
+}
+
+#lista-comentarios .card-title {
+  font-size: 1rem;
+  color: #0d6efd;
+  /* Color azul de Bootstrap */
+  margin-bottom: 0.5rem;
+}
+
+#lista-comentarios .card-text {
+  margin-bottom: 0;
+  color: #333;
+}
+
 
 .card-img-top {
   width: 100% !important;

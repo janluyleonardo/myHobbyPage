@@ -20,9 +20,16 @@ async function cargarComentarios() {
     const response = await fetch('/comentarios');
     const comentarios = await response.json();
     const lista = document.getElementById('lista-comentarios');
-    lista.innerHTML = comentarios.map(c =>
-        `<div><strong>${c.nombre}:</strong><br> ${c.comentario}</div>`
-    ).join('');
+    lista.innerHTML = comentarios.map(comentario =>
+    `<div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">${comentario.nombre}</h5>
+          <p class="card-text">${comentario.comentario}</p>
+        </div>
+      </div>
+    </div>`
+  ).join('');
 }
 
 // Cargar comentarios al inicio
