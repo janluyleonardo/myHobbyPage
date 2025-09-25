@@ -21,7 +21,7 @@ async function cargarComentarios() {
     const comentarios = await response.json();
     const lista = document.getElementById('lista-comentarios');
     lista.innerHTML = comentarios.map(c =>
-        `<div><strong>${c.nombre}:</strong> ${c.comentario}</div>`
+        `<div><strong>${c.nombre}:</strong><br> ${c.comentario}</div>`
     ).join('');
 }
 
