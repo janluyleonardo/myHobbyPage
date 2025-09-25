@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -16,14 +20,10 @@ footer {
 .introduccion-container {
   width: 100%;
   height: 100vh;
-  /* Ocupa el 100% del alto de la pantalla */
   background-image: url('images/introduction.png');
   background-size: cover;
-  /* La imagen cubre todo el contenedor */
   background-position: center;
-  /* Centra la imagen */
   background-repeat: no-repeat;
-  /* Evita que se repita */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,16 +39,13 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Fondo semi-transparente para mejorar legibilidad */
   z-index: 1;
 }
 
 .introduccion-content {
   position: relative;
   z-index: 2;
-  /* Asegura que el texto esté encima del pseudo-elemento */
   color: white;
-  /* Texto blanco para contraste */
   text-align: center;
   padding: 2rem;
   max-width: 800px;
@@ -64,14 +61,6 @@ footer {
   font-size: 1.2rem;
   line-height: 1.6;
 }
-
-
-/* .galeria .imagenes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-} */
 
 .galeria img {
   width: 200px;
@@ -92,12 +81,10 @@ footer {
   padding: 0.5rem;
 }
 
-/* Estilo para el contenedor de comentarios */
 #lista-comentarios {
   padding: 1rem 0;
 }
 
-/* Estilo para las tarjetas de comentarios */
 #lista-comentarios .card {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
@@ -116,7 +103,6 @@ footer {
 #lista-comentarios .card-title {
   font-size: 1rem;
   color: #0d6efd;
-  /* Color azul de Bootstrap */
   margin-bottom: 0.5rem;
 }
 
@@ -125,64 +111,47 @@ footer {
   color: #333;
 }
 
-
 .card-img-top {
   width: 100% !important;
-  /* Ocupa el 100% del ancho de la tarjeta */
   height: 80% !important;
-  /* Alto fijo para uniformidad */
   object-fit: cover;
-  /* Ajusta la imagen sin deformarla */
   border-top-left-radius: calc(0.25rem - 1px);
-  /* Bordes redondeados */
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
 .card {
   border: none;
-  /* Elimina el borde por defecto */
   overflow: hidden;
-  /* Evita que la imagen se salga de la tarjeta */
   transition: transform 0.3s ease;
-  /* Efecto de hover */
 }
 
 .card:hover {
   transform: translateY(-5px);
-  /* Efecto de elevación al pasar el mouse */
 }
 
 .card-body {
   padding: 1rem;
-  /* Espaciado interno */
 }
 
-/* Estilo para la sección de galería a pantalla completa */
 .galeria-fullscreen {
   width: 100%;
   height: 100vh;
-  /* Ocupa el 100% del alto de la pantalla */
   padding: 2rem 0;
   background-color: #f8f9fa;
-  /* Fondo claro para la galería */
   display: flex;
   flex-direction: column;
 }
 
-/* Asegura que el contenedor interno ocupe todo el espacio */
 .galeria-fullscreen .container-fluid {
   height: 100%;
   padding: 0 1rem;
 }
 
-/* Ajusta el alto del row para que ocupe el espacio restante */
 .galeria-fullscreen .row {
   flex-grow: 1;
   overflow-y: auto;
-  /* Permite hacer scroll si el contenido es muy largo */
 }
 
-/* Estilo para las tarjetas dentro de la galería */
 .galeria-fullscreen .card {
   border: none;
   overflow: hidden;
@@ -193,7 +162,6 @@ footer {
   transform: translateY(-5px);
 }
 
-/* Estilo para las imágenes dentro de las tarjetas */
 .galeria-fullscreen .card-img-top {
   width: 100%;
   height: 200px;
@@ -202,9 +170,50 @@ footer {
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
-/* Estilo para el título de la galería */
 .galeria-fullscreen h2 {
   color: #333;
   margin-bottom: 1.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #b3b1b1;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#footer-typing {
+  margin: 0;
+  font-family: 'consola', monospace;
+  font-size: 1rem;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Animación del efecto de escritura */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* Animación del cursor parpadeante */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange;
+  }
 }
